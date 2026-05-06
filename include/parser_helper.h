@@ -12,6 +12,7 @@ using std::string;
 using std::vector;
 
 namespace ParserHelper {
+//reads file and returns associated value
 template <typename T>
 T GetValueByKey(string const &filter, string const &filename) {
   string line, key;
@@ -30,6 +31,7 @@ T GetValueByKey(string const &filter, string const &filename) {
   }
   return value;
 };
+//reads value from the file
 template <typename T>
 T GetValue(string const &filename) {
   string line;
