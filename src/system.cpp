@@ -1,6 +1,5 @@
 #include <string>
 #include <vector>
-
 #include "linux_parser.h"
 #include "process.h"
 #include "processor.h"
