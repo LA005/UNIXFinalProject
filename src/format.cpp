@@ -28,7 +28,7 @@ string Format::ElapsedTime(long seconds) {
   return Format(hour) + ':' + Format(min) + ':' + Format(sec);
 }
 
-string Format::KBisMB(float kb) {
+string Format::KBisMB(float kb) {//converts Kb to mb to 1 decimal
   float mb = kb / 1024;
   std::stringstream mb_stream;
   mb_stream << std::fixed << std::setprecision(1) << mb;
