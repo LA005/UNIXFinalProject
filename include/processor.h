@@ -9,6 +9,7 @@ using std::vector;
 
 class Processor {
  private:
+//steals many data points
   int previdle;
   int previowait;
   int prevuser;
@@ -18,7 +19,7 @@ class Processor {
   int prevsoftirq;
   int prevsteal;
 
-  void AssignPrevValues(vector<double>);
+  void AssignPrevValues(vector<double>);//stores the values
   vector<double> ReadFile();
 
  public:
