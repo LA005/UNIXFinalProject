@@ -40,7 +40,7 @@ double Processor::Utilization() {
   AssignPrevValues(values);
   return CPU_Percentage;
 }
-
+//stores most recent cpu values
 void Processor::AssignPrevValues(vector<double> newValues) {
   prevuser = newValues[0];
   prevnice = newValues[1];
@@ -51,7 +51,7 @@ void Processor::AssignPrevValues(vector<double> newValues) {
   prevsoftirq = newValues[6];
   prevsteal = newValues[7];
 }
-
+//reads raw data
 vector<double> Processor::ReadFile() {
   string line, key;
   double value;
