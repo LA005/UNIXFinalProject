@@ -10,6 +10,7 @@
 
 class System {
  public:
+//acceses various processes and data
   Processor& Cpu();                  
   All_Processes& Processes(); 
   float MemoryUtilization();         
@@ -19,7 +20,7 @@ class System {
   std::string Kernel();              
   std::string OperatingSystem();     
 
-  // TODO: Define any necessary private members
+
  private:
   Processor cpu_;
   All_Processes processes_;
