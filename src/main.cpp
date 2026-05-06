@@ -5,7 +5,7 @@
 
 
 
-int main() {
+int main() {//runs the code
   System system;
   NCursesDisplay::Display(system, 20);
 }
