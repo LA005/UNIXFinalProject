@@ -5,7 +5,6 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
 #include "format.h"
 #include "linux_parser.h"
 #include "parser_consts.h"
