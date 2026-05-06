@@ -13,6 +13,7 @@ It contains relevant attributes as shown below
 */
 class Process {
  private:
+//initializes many different variables to store data 
   int pid_;
   long Hertz_;
   float utime_ = 0.0;
