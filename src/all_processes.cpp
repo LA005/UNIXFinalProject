@@ -8,7 +8,7 @@
 using std::sort;
 using std::vector;
 
-bool compareProcesses(Process& p1, Process& p2) {
+bool compareProcesses(Process& p1, Process& p2) {//commpares the processes
   return (p1.RawRam() > p2.RawRam());
 };
 
@@ -17,12 +17,12 @@ All_Processes::All_Processes() {
   UpdateProcesses();
 }
 
-vector<Process>& All_Processes::GetProcesses() {
+vector<Process>& All_Processes::GetProcesses() {//returns current process list
   UpdateProcesses();
   return all_processes_;
 }
 
-void All_Processes::UpdateProcesses() {
+void All_Processes::UpdateProcesses() {//updfates tghe process list by reading and adding the new processes
   current_pids_ = ReadFolders();
 
   bool changed = false;
@@ -37,7 +37,7 @@ void All_Processes::UpdateProcesses() {
 
 vector<int> All_Processes::ReadFolders() { return LinuxParser::Pids(); };
 
-void All_Processes::AddNewProcesses(bool& changed) {
+void All_Processes::AddNewProcesses(bool& changed) {//adds processes not running previously
   for (std::size_t i = 0; i < current_pids_.size(); ++i) {
     int current_pid = current_pids_[i];
 
@@ -53,7 +53,7 @@ void All_Processes::AddNewProcesses(bool& changed) {
   }
 }
 
-void All_Processes::RemoveFinishedProcesses(bool& changed) {
+void All_Processes::RemoveFinishedProcesses(bool& changed) {//removes finished processes
   for (size_t i = 0; i < all_processes_.size(); i++) {
     int current_pid = all_processes_[i].Pid();
 
