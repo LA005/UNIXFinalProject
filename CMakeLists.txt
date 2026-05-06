@@ -7,6 +7,7 @@ include_directories(${CURSES_INCLUDE_DIRS})
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp")
 
+
 add_executable(monitor ${SOURCES})
 
 set_property(TARGET monitor PROPERTY CXX_STANDARD 17)
