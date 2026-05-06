@@ -4,7 +4,7 @@
 #include <string>
 
 using std::string;
-
+//Making constants to read system files
 namespace ParserConsts {
 const string kProcDirectory{"/proc/"};
 const string kCmdlineFilename{"/cmdline"};
